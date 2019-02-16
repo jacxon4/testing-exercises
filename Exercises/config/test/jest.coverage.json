@@ -1,0 +1,32 @@
+{
+  "rootDir": "../../",
+
+  "preset": "ts-jest",
+
+  "setupFiles": [
+    "<rootDir>/config/test/polyfills.js",
+    "<rootDir>/config/test/setupTest.js"
+  ],
+
+  "restoreMocks": true,
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "moduleNameMapper": {
+    "^.+\\.s?css$": "identity-obj-proxy"
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": ["**/*.{ts,tsx}"],
+  "coverageThreshold": {
+    "src/**/reducers/*.ts": {
+      "branches": 100
+    },
+    "src/**/*.tsx": {
+      "lines": 60,
+      "functions": 80
+    }
+  },
+  "coverageReporters":[
+      "text",
+      "lcov",
+      "html"
+  ]
+}
