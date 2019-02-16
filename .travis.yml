@@ -1,5 +1,5 @@
-language: node_js
 before_script: cd Exercises
+language: node_js
 node_js:
   - "8"
 
