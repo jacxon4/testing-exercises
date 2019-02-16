@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/components/panel should render as expected passing req. props 1`] = `
+<Component
+  title="title"
+>
+  <div
+    className="card"
+  >
+    <Component
+      title="title"
+    >
+      <div
+        className="card-header"
+      >
+        <h3
+          className="panel-title"
+        >
+          title
+        </h3>
+      </div>
+    </Component>
+    <Component>
+      <ul
+        className="list-group list-group-flush"
+      >
+        <li
+          className="list-group-item"
+        >
+          <h2>
+            Test children
+          </h2>
+        </li>
+      </ul>
+    </Component>
+  </div>
+</Component>
+`;
