@@ -11,7 +11,7 @@ exports[`common/components/panel should render as expected passing req. props 1`
       title="title"
     >
       <div
-        className="card-header"
+        className="card-header header"
       >
         <h3
           className="panel-title"
