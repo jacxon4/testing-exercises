@@ -1,4 +1,4 @@
-before_install: cd Exercises
+before_install: cd Deliverables
 language: node_js
 node_js:
   - "8"

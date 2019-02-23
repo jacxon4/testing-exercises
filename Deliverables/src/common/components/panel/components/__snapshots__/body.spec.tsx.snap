@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common/components/panel/components/body should render when passing required properites 1`] = `
+<ul
+  className="list-group list-group-flush"
+>
+  <li
+    className="list-group-item"
+  >
+    <h1>
+      Test childred
+    </h1>
+  </li>
+</ul>
+`;
