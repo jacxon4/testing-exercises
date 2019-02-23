@@ -1,16 +1,24 @@
-import { LoginEntity, LoginFormErrors, createEmptyLoginEntity, createEmptyLoginFormErrors } from "../viewModel";
-import { actionIds } from "../actions/actionIds";
+import {
+  LoginEntity,
+  LoginFormErrors,
+  createEmptyLoginEntity,
+  createEmptyLoginFormErrors
+} from '../viewModel';
+import { actionIds } from '../actions/actionIds';
 export interface LoginState {
   loginEntity: LoginEntity;
   loginFormErrors: LoginFormErrors;
 }
 
-const loginStateFactory =  ():LoginState=>({
-    loginEntity: createEmptyLoginEntity(),
-    loginFormErrors: createEmptyLoginFormErrors(),
-})
+const loginStateFactory = (): LoginState => ({
+  loginEntity: createEmptyLoginEntity(),
+  loginFormErrors: createEmptyLoginFormErrors(),
+});
 
-export const loginReducer = (state:LoginState =loginStateFactory(), action) => {
+export const loginReducer = (
+  state: LoginState = loginStateFactory(),
+  action
+) => {
   switch (action.type) {
     case actionIds.UPDATE_LOGIN_ENTITY_FIELD:
       return handleUpdateLoginEntityField(state, action.payload);
@@ -27,12 +35,12 @@ const handleUpdateLoginEntityField = (
 ): LoginState => ({
   loginEntity: {
     ...state.loginEntity,
-    [fieldName]: value
+    [fieldName]: value,
   },
   loginFormErrors: {
     ...state.loginFormErrors,
-    [fieldName]: fieldValidationResult
-  }
+    [fieldName]: fieldValidationResult,
+  },
 });
 
 const handleUpdateloginFormErrors = (
@@ -42,6 +50,6 @@ const handleUpdateloginFormErrors = (
   ...state,
   loginFormErrors: {
     ...state.loginFormErrors,
-    ...fieldErrors
-  }
+    ...fieldErrors,
+  },
 });

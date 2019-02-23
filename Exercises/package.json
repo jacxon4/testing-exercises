@@ -10,7 +10,7 @@
     "build": "env-cmd .env if-env NODE_ENV=production && npm run build:prod || npm run build:dev",
     "build:dev": "rimraf dist && env-cmd .env cross-env NODE_ENV=development webpack --config ./config/webpack/app/dev.js",
     "build:prod": "rimraf dist && env-cmd .env cross-env NODE_ENV=production webpack -p --config ./config/webpack/app/prod.js",
-    "test": "jest -c ./config/test/jest.json --verbose",
+    "test": "rimraf coverage && jest -c ./config/test/jest.coverage.json --verbose --coverage",
     "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i --no-cache"
   },
   "author": "Lemoncode",

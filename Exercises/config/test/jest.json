@@ -5,7 +5,6 @@
 
   "setupFiles": [
     "<rootDir>/config/test/polyfills.js",
-
     "<rootDir>/config/test/setupTest.js"
   ],
 
