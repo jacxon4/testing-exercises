@@ -18,10 +18,6 @@
   "coverageThreshold": {
     "src/**/reducers/*.ts": {
       "branches": 100
-    },
-    "src/**/*.tsx": {
-      "lines": 60,
-      "functions": 80
     }
   },
   "coverageReporters":[

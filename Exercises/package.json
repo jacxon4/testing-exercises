@@ -12,7 +12,6 @@
     "build:prod": "rimraf dist && env-cmd .env cross-env NODE_ENV=production webpack -p --config ./config/webpack/app/prod.js",
     "test": "jest -c ./config/test/jest.json --verbose",
     "test:coverage": "rimraf coverage && jest -c ./config/test/jest.coverage.json --verbose --coverage",
-    "test-ci:coverage": "rimraf coverage && jest -c ./config/test/jest.coverage.ci.json --verbose --coverage",
     "test:watch": "jest -c ./config/test/jest.json --verbose --watchAll -i --no-cache"
   },
   "author": "Lemoncode",
