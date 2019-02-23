@@ -1,10 +1,10 @@
 # Testing deliverable
 Deliverable code to increase test coverage over:
-- ./src/pages/members/list/mappers
-- ./src/pages/members/list/actions
-- ./src/pages/members/list/reducers
-- ./src/pages/members/list/components
-- ./src/pages/members/list/pageContainer
+[x] ./src/pages/members/list/mappers
+[x] ./src/pages/members/list/actions
+[] ./src/pages/members/list/reducers
+[] ./src/pages/members/list/components
+[] ./src/pages/members/list/pageContainer
 
 Bonus points:
 [] Create reselect state functions for Login page and cover them following TDD.
