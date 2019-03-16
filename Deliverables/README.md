@@ -3,7 +3,7 @@ Deliverable code to increase test coverage over:
 - [x] ./src/pages/members/list/mappers
 - [x] ./src/pages/members/list/actions
 - [ ] ./src/pages/members/list/reducers
-- [ ] ./src/pages/members/list/components
+- [x] ./src/pages/members/list/components
 - [ ] ./src/pages/members/list/pageContainer
 
 Bonus points:

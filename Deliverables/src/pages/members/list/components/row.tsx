@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Member } from '../viewModel';
 
-interface Props {
+export interface RowProps {
   member: Member;
 }
 
-export const Row: React.StatelessComponent<Props> = (props) => (
+export const Row: React.StatelessComponent<RowProps> = (props) => (
   <tr>
     <td>
       <img src={props.member.avatarUrl} style={{ maxWidth: '10rem' }} />
