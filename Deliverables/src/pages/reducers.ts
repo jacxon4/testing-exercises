@@ -1,9 +1,12 @@
 import { combineReducers } from 'redux';
-import {LoginState,loginReducer} from './login/reducers';
+import { LoginState, loginReducer } from './login/reducers';
+import { MembersState, membersReducer } from './members/list';
 export interface State {
-    login: LoginState;
+  login: LoginState;
+  members: MembersState;
 }
 
 export const reducers = combineReducers<State>({
-    login: loginReducer,
+  login: loginReducer,
+  members: membersReducer,
 });

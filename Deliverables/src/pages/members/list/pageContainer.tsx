@@ -1,33 +1,35 @@
 import * as React from 'react';
 import { MemberListPage } from './page';
 import { Member } from './viewModel';
-import { fetchMembers } from '../../../rest-api/api/member';
+import { fetchMembers } from './actions/fetchMembers';
 import { mapMemberListModelToVM } from './mappers';
+import { State } from '../../reducers';
+import { connect } from 'react-redux';
 
-interface State {
+export interface MemberPageContainerProps {
   members: Member[];
+  fetchMembers: () => void;
 }
 
-export class MemberListPageContainer extends React.PureComponent<{}, State> {
-  state = {
-    members: [],
-  };
+const mapStateToProps = (state: State) => ({
+  members: mapMemberListModelToVM(state.members),
+});
 
+const mapDispatchToProps = dispatch => ({
+  fetchMembers: () => dispatch(fetchMembers()),
+});
+
+class PageContainer extends React.PureComponent<MemberPageContainerProps, {}> {
   componentDidMount() {
-    fetchMembers()
-      .then((members) => {
-        this.setState({
-          members: mapMemberListModelToVM(members),
-        });
-      })
-      .catch(alert);
+    this.props.fetchMembers();
   }
 
   render() {
-    return (
-      <MemberListPage
-        members={this.state.members}
-      />
-    );
+    return <MemberListPage members={this.props.members} />;
   }
 }
+
+export const MemberListPageContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PageContainer);
