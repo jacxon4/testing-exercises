@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/login/components/form should render properties provided 1`] = `
+<form
+  role="form"
+>
+  <fieldset>
+    <Component
+      error=""
+      label="Login"
+      name="login"
+      onChange={[Function]}
+      placeholder="E-mail"
+      type="text"
+      value="LoginEntityLogin"
+    />
+    <Component
+      error=""
+      label="Password"
+      name="password"
+      onChange={[Function]}
+      placeholder="password"
+      type="password"
+      value="LoginEntityPassword"
+    />
+    <Component
+      label="Login"
+      onClick={[Function]}
+      type="submit"
+    />
+  </fieldset>
+</form>
+`;

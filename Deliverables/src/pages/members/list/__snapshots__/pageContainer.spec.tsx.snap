@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/members/list/pageContainer should provide the member list to the page when members exist 1`] = `
+<PageContainer
+  fetchMembers={[Function]}
+  members={
+    Array [
+      Object {
+        "avatarUrl": undefined,
+        "id": 1,
+        "name": undefined,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`pages/members/list/pageContainer should render as expected when state member is empty 1`] = `
+<PageContainer
+  fetchMembers={[Function]}
+  members={Array []}
+/>
+`;
